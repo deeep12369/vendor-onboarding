@@ -262,7 +262,7 @@ def stage_triangulation(ctx):
 
     # T04 — bank details: form vs cheque
     chq_acct, chq_ifsc = field(chq, "account_number"), field(chq, "ifsc")
-    if chq and (chq_acct or chq_ifsc):
+    if chq and (chq_acct or chq_ifsc) and s.get("account_number"):
         acct_ok = chq_acct is None or chq_acct == s.get("account_number")
         ifsc_ok = chq_ifsc is None or chq_ifsc == s.get("ifsc")
         msgs = []
@@ -279,7 +279,11 @@ def stage_triangulation(ctx):
 
     # T05 — penny-drop holder name
     penny = ctx.get("penny") or {}
-    if not penny.get("verified"):
+    if not s.get("account_number") or not s.get("ifsc"):
+        out.append(res("T05", "triangulation", False, "FIX",
+                       "Bank not checked: the form has no account number or IFSC yet (see F01)", {},
+                       "Please enter your bank account number and IFSC."))
+    elif not penny.get("verified"):
         out.append(res("T05", "triangulation", False, "REVIEW", penny.get("message", "Bank verification not available"),
                        {"penny_drop": penny}))
     else:
@@ -292,8 +296,16 @@ def stage_triangulation(ctx):
                        {"penny_drop": penny, "form_name": s.get("legal_name"), "match": m}, note=note))
 
     # T06 — GST registry status
-    if not reg:
-        out.append(res("T06", "triangulation", False, "BLOCK", f"GSTIN {s.get('gstin')} not found in the GST registry",
+    if not gstin_valid(s.get("gstin"))[0]:
+        # Nothing valid to look up: the format rule (F03) already asks the vendor to fix it
+        out.append(res("T06", "triangulation", False, "FIX",
+                       "GST registry not checked: the form has no valid GSTIN yet (see F03)",
+                       {"gstin": s.get("gstin")}, "Please enter your GSTIN exactly as it appears on your GST certificate."))
+    elif not reg:
+        # A well-formed GSTIN that the registry does not know: could be a typo or a brand-new
+        # registration, or a made-up number. A person checks it on the GST portal.
+        out.append(res("T06", "triangulation", False, "REVIEW",
+                       f"GSTIN {s.get('gstin')} not found in the GST registry (demo registry holds only the demo vendors)",
                        {"gstin": s.get("gstin")}))
     else:
         active = reg.get("status") == "Active"

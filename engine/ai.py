@@ -41,8 +41,11 @@ DOC_FIELDS = {
 }
 ID_FIELDS = {"gstin", "pan", "ifsc", "account_number", "udyam_number"}
 
-DEFAULT_MODEL = "gemini-flash-latest"
-FALLBACK_MODEL = "gemini-2.5-flash"
+# Tried in order until one answers. Google retires model names over time; a new key may not
+# have access to older ones (they return 404), so the app moves down the list by itself.
+MODEL_CANDIDATES = ["gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite",
+                    "gemini-flash-latest", "gemini-2.5-flash"]
+_working_model = None  # remembered after the first success, so later calls skip dead names
 
 EXTRACT_PROMPT = """You are a document analyst for an Indian company's vendor onboarding team.
 You are given ONE uploaded file. Do two things.
@@ -135,7 +138,8 @@ def explain_error(exc):
     if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
         return "Free-tier limit reached (too many requests). Wait a minute, or use offline mode."
     if "404" in msg or "NOT_FOUND" in msg:
-        return "Model not found. Set GEMINI_MODEL in Secrets, e.g. gemini-2.5-flash."
+        return ("None of the known Gemini models is available to this key. Check which models your key "
+                "can use in AI Studio and set GEMINI_MODEL in Secrets to one of them.")
     return msg[:200]
 
 
@@ -155,9 +159,9 @@ def _call_gemini(cfg, contents):
 
     client = genai.Client(api_key=cfg["api_key"])
     config = types.GenerateContentConfig(temperature=0, response_mime_type="application/json")
-    models = [cfg.get("model") or DEFAULT_MODEL]
-    if FALLBACK_MODEL not in models:
-        models.append(FALLBACK_MODEL)
+    global _working_model
+    models = [m for m in [cfg.get("model"), _working_model] if m] + MODEL_CANDIDATES
+    models = list(dict.fromkeys(models))  # remove repeats, keep order
 
     last_error = None
     for model in models:
@@ -168,7 +172,9 @@ def _call_gemini(cfg, contents):
                 text = (resp.text or "").strip()
                 if text.startswith("```"):
                     text = text.strip("`").removeprefix("json").strip()
-                return json.loads(text), model
+                answer = json.loads(text)
+                _working_model = model
+                return answer, model
             except json.JSONDecodeError as exc:
                 last_error = exc          # malformed answer: retry once more
                 if attempt >= 1:
@@ -176,14 +182,14 @@ def _call_gemini(cfg, contents):
             except Exception as exc:
                 last_error = exc
                 msg = str(exc)
+                if "404" in msg or "NOT_FOUND" in msg or "limit: 0" in msg:
+                    break                 # this model is not available to this key: try the next one
                 if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "503" in msg or "UNAVAILABLE" in msg:
                     if cfg.get("on_wait"):
                         cfg["on_wait"](f"Gemini is busy (rate limit); retrying in {wait}s")
                     time.sleep(wait)
                     wait *= 2             # exponential backoff: 4s, 8s, 16s
                     continue
-                if "404" in msg or "NOT_FOUND" in msg:
-                    break                 # model name not available: try the fallback model
                 raise AIUnavailable(msg) from exc
     raise AIUnavailable(str(last_error))
 

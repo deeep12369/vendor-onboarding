@@ -19,6 +19,7 @@ def load_case(case):
         v = case["form"].get(f, "")
         st.session_state[f"f_{f}"] = "" if v is None else (str(v) if f != "entity_type" else v)
     st.session_state["demo_case"] = case
+    st.session_state["form_data"] = {f: st.session_state[f"f_{f}"] for f in FORM_FIELDS}
     st.session_state.pop("last_result", None)
 
 
@@ -26,6 +27,7 @@ def clear_form():
     for f in FORM_FIELDS:
         st.session_state[f"f_{f}"] = "private_limited" if f == "entity_type" else ""
     st.session_state.pop("demo_case", None)
+    st.session_state.pop("form_data", None)
     st.session_state.pop("last_result", None)
 
 
@@ -49,8 +51,12 @@ with st.container(border=True):
                     f"Expected outcome: :blue-background[{demo['expected']}]")
 
 # ---------------------------------------------------------------- the form
+# Streamlit forgets a page's input boxes when you visit another page, so the form is
+# also kept in "form_data" and restored from it when you come back.
+saved = st.session_state.get("form_data", {})
 for f in FORM_FIELDS:
-    st.session_state.setdefault(f"f_{f}", "private_limited" if f == "entity_type" else "")
+    if f"f_{f}" not in st.session_state:
+        st.session_state[f"f_{f}"] = saved.get(f) or ("private_limited" if f == "entity_type" else "")
 
 col_a, col_b, col_c = st.columns(3)
 with col_a:
@@ -80,6 +86,8 @@ with col_c:
     cc5, cc6 = st.columns(2)
     cc5.text_input("Category", key="f_category")
     cc6.text_input("Expected annual spend (₹)", key="f_expected_annual_spend_inr")
+
+st.session_state["form_data"] = {f: st.session_state.get(f"f_{f}") for f in FORM_FIELDS}
 
 # ---------------------------------------------------------------- documents
 st.markdown("**Documents** — upload in any order, with any file names")
