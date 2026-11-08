@@ -1,0 +1,357 @@
+{
+  "9b9ca5f09fe1ae51e5dafc96452030960c2f8309da5d12a2f2c95482b57c73b6": {
+    "doc_type": "gst_certificate",
+    "doc_type_confidence": 0.98,
+    "quality_issue": null,
+    "notes": "Form GST REG-06 registration certificate (specimen).",
+    "fields": {
+      "legal_name": {
+        "value": "SHARMA PACKAGING PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "trade_name": {
+        "value": "SHARMA PACKAGING",
+        "confidence": 0.97
+      },
+      "gstin": {
+        "value": "07AAKCS1234F1ZK",
+        "confidence": 0.98
+      },
+      "state": {
+        "value": "Delhi",
+        "confidence": 0.95
+      },
+      "registration_date": {
+        "value": "01/04/2019",
+        "confidence": 0.9
+      }
+    }
+  },
+  "891ad47882b4bd8c6e49a8ea6c9718f622de26ca8db50ce09d598c7f22d1b649": {
+    "doc_type": "pan_card",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Income Tax PAN card (specimen).",
+    "fields": {
+      "name": {
+        "value": "SHARMA PACKAGING PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "pan": {
+        "value": "AAKCS1234F",
+        "confidence": 0.98
+      }
+    }
+  },
+  "33b2d6d02a8581a9560477203c326baad091e0b6fdd7bc837a324fe9f85ff38e": {
+    "doc_type": "cancelled_cheque",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Cancelled cheque (specimen).",
+    "fields": {
+      "account_holder_name": {
+        "value": "SHARMA PACKAGING PVT LTD",
+        "confidence": 0.95
+      },
+      "account_number": {
+        "value": "50100234567890",
+        "confidence": 0.96
+      },
+      "ifsc": {
+        "value": "HDFC0000123",
+        "confidence": 0.96
+      },
+      "bank_name": {
+        "value": "HDFC Bank",
+        "confidence": 0.97
+      }
+    }
+  },
+  "179afcac738f4bb8a5c482188fd1db3470038b679c1ec2afb47950efdf86e749": {
+    "doc_type": "gst_certificate",
+    "doc_type_confidence": 0.98,
+    "quality_issue": null,
+    "notes": "Form GST REG-06 registration certificate (specimen).",
+    "fields": {
+      "legal_name": {
+        "value": "MEHTA HARDWARE",
+        "confidence": 0.97
+      },
+      "trade_name": {
+        "value": "MEHTA HARDWARE",
+        "confidence": 0.97
+      },
+      "gstin": {
+        "value": "06AAHFM5521K1Z8",
+        "confidence": 0.98
+      },
+      "state": {
+        "value": "Haryana",
+        "confidence": 0.95
+      },
+      "registration_date": {
+        "value": "01/04/2019",
+        "confidence": 0.9
+      }
+    }
+  },
+  "bd2d0f9167275d932373579a8e27f4b1dff429bbd0089f7a60ab8e4d4df8f68b": {
+    "doc_type": "aadhaar",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "An Aadhaar card; no fields read on purpose.",
+    "fields": {}
+  },
+  "1bde65497ef408247fa591c27e9a100e66a76c04e754c9324a98e398cfe11a35": {
+    "doc_type": "cancelled_cheque",
+    "doc_type_confidence": 0.9,
+    "quality_issue": "blurred",
+    "notes": "A cancelled cheque, but too blurred to read the numbers reliably.",
+    "fields": {
+      "account_holder_name": {
+        "value": "MEHTA HARDWARE",
+        "confidence": 0.62
+      },
+      "account_number": {
+        "value": null,
+        "confidence": 0.2
+      },
+      "ifsc": {
+        "value": null,
+        "confidence": 0.3
+      },
+      "bank_name": {
+        "value": "Axis Bank",
+        "confidence": 0.85
+      }
+    }
+  },
+  "2bb7b3d61578ffdb05a3c9965ed65f0fbd0b19f82193c8868ae470c5058dc832": {
+    "doc_type": "gst_certificate",
+    "doc_type_confidence": 0.98,
+    "quality_issue": null,
+    "notes": "Form GST REG-06 registration certificate (specimen).",
+    "fields": {
+      "legal_name": {
+        "value": "APEX OFFICE SUPPLIES PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "trade_name": {
+        "value": "APEX OFFICE SUPPLIES PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "gstin": {
+        "value": "09AADCK7788Q1ZD",
+        "confidence": 0.98
+      },
+      "state": {
+        "value": "Uttar Pradesh",
+        "confidence": 0.95
+      },
+      "registration_date": {
+        "value": "01/04/2019",
+        "confidence": 0.9
+      }
+    }
+  },
+  "e4dd3f2e0cc318b99bde79700fef228d387ca1bd5342c96633ceefe9f04f397c": {
+    "doc_type": "pan_card",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Income Tax PAN card (specimen).",
+    "fields": {
+      "name": {
+        "value": "APEX OFFICE SUPPLIES PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "pan": {
+        "value": "AADCK7788Q",
+        "confidence": 0.98
+      }
+    }
+  },
+  "85f1e63c799bc87dffb7a77b34c33d704d5fde6139dbb57446e69ae4c19f451a": {
+    "doc_type": "cancelled_cheque",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Cancelled cheque (specimen).",
+    "fields": {
+      "account_holder_name": {
+        "value": "APEX OFFICE SUPPLIES PVT LTD",
+        "confidence": 0.95
+      },
+      "account_number": {
+        "value": "33445566778",
+        "confidence": 0.96
+      },
+      "ifsc": {
+        "value": "SBIN0001234",
+        "confidence": 0.96
+      },
+      "bank_name": {
+        "value": "State Bank of India",
+        "confidence": 0.97
+      }
+    }
+  },
+  "6f42cfd969021013752604c01e1d72b6b2a84d460f88e49c1199b0fa3b7d09a7": {
+    "doc_type": "gst_certificate",
+    "doc_type_confidence": 0.98,
+    "quality_issue": null,
+    "notes": "Form GST REG-06 registration certificate (specimen).",
+    "fields": {
+      "legal_name": {
+        "value": "AMIT GUPTA",
+        "confidence": 0.97
+      },
+      "trade_name": {
+        "value": "GUPTA ELECTRICALS",
+        "confidence": 0.97
+      },
+      "gstin": {
+        "value": "09ABCPG4821M1ZL",
+        "confidence": 0.98
+      },
+      "state": {
+        "value": "Uttar Pradesh",
+        "confidence": 0.95
+      },
+      "registration_date": {
+        "value": "01/04/2019",
+        "confidence": 0.9
+      }
+    }
+  },
+  "ab794c961f760e0d9374c60904dd44d0a98006eb9f22c503b1b9bbcdbba7d8a3": {
+    "doc_type": "pan_card",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Income Tax PAN card (specimen).",
+    "fields": {
+      "name": {
+        "value": "AMIT GUPTA",
+        "confidence": 0.97
+      },
+      "pan": {
+        "value": "ABCPG4821M",
+        "confidence": 0.98
+      }
+    }
+  },
+  "6db4fc08b83585a219b7dbb4bddd6c5a9b5e0030a9e901549f19558aad74378c": {
+    "doc_type": "cancelled_cheque",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Cancelled cheque (specimen).",
+    "fields": {
+      "account_holder_name": {
+        "value": "AMIT GUPTA",
+        "confidence": 0.95
+      },
+      "account_number": {
+        "value": "0123104567890",
+        "confidence": 0.96
+      },
+      "ifsc": {
+        "value": "PUNB0012300",
+        "confidence": 0.96
+      },
+      "bank_name": {
+        "value": "Punjab National Bank",
+        "confidence": 0.97
+      }
+    }
+  },
+  "1e4658e7090d655c683912e27908975f5c4c31328156e5b2c4ed8c5d3dcbbd8d": {
+    "doc_type": "cancelled_cheque",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Cancelled cheque (specimen).",
+    "fields": {
+      "account_holder_name": {
+        "value": "NEHA VERMA",
+        "confidence": 0.95
+      },
+      "account_number": {
+        "value": "50200098765432",
+        "confidence": 0.96
+      },
+      "ifsc": {
+        "value": "HDFC0004567",
+        "confidence": 0.96
+      },
+      "bank_name": {
+        "value": "HDFC Bank",
+        "confidence": 0.97
+      }
+    }
+  },
+  "f66594f99451d95af725a3e9466c192cff05a0c1e657bd5781050084fd2ac54e": {
+    "doc_type": "gst_certificate",
+    "doc_type_confidence": 0.98,
+    "quality_issue": null,
+    "notes": "Form GST REG-06 registration certificate (specimen).",
+    "fields": {
+      "legal_name": {
+        "value": "NOVA PRINTS PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "trade_name": {
+        "value": "NOVA PRINTS",
+        "confidence": 0.97
+      },
+      "gstin": {
+        "value": "27AAFCN3344R1ZW",
+        "confidence": 0.98
+      },
+      "state": {
+        "value": "Maharashtra",
+        "confidence": 0.95
+      },
+      "registration_date": {
+        "value": "01/04/2019",
+        "confidence": 0.9
+      }
+    }
+  },
+  "bd743affad7f0ce188c803de96c62437cda68ba46a6040ddc10f0f6f3a5a71ba": {
+    "doc_type": "pan_card",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Income Tax PAN card (specimen).",
+    "fields": {
+      "name": {
+        "value": "NOVA PRINTS PRIVATE LIMITED",
+        "confidence": 0.97
+      },
+      "pan": {
+        "value": "AAFCN3344R",
+        "confidence": 0.98
+      }
+    }
+  },
+  "7bfa272d1c280949d3bb37c8862eab903e6b3924fdf82e3af47a3135fb4c8fb2": {
+    "doc_type": "cancelled_cheque",
+    "doc_type_confidence": 0.97,
+    "quality_issue": null,
+    "notes": "Cancelled cheque (specimen).",
+    "fields": {
+      "account_holder_name": {
+        "value": "NOVA PRINTS PVT LTD",
+        "confidence": 0.95
+      },
+      "account_number": {
+        "value": "918020045678123",
+        "confidence": 0.96
+      },
+      "ifsc": {
+        "value": "ICIC0000789",
+        "confidence": 0.96
+      },
+      "bank_name": {
+        "value": "ICICI Bank",
+        "confidence": 0.97
+      }
+    }
+  }
+}

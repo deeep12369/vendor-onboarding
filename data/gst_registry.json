@@ -1,0 +1,47 @@
+{
+  "07AAKCS1234F1ZK": {
+    "gstin": "07AAKCS1234F1ZK",
+    "legal_name": "SHARMA PACKAGING PRIVATE LIMITED",
+    "trade_name": "SHARMA PACKAGING",
+    "state": "Delhi",
+    "status": "Active",
+    "registration_date": "2019-04-01",
+    "constitution": "Private Limited Company"
+  },
+  "06AAHFM5521K1Z8": {
+    "gstin": "06AAHFM5521K1Z8",
+    "legal_name": "MEHTA HARDWARE",
+    "trade_name": "MEHTA HARDWARE",
+    "state": "Haryana",
+    "status": "Active",
+    "registration_date": "2019-04-01",
+    "constitution": "Partnership"
+  },
+  "09AADCK7788Q1ZD": {
+    "gstin": "09AADCK7788Q1ZD",
+    "legal_name": "KALRA INDUSTRIAL TRADERS PRIVATE LIMITED",
+    "trade_name": "KALRA TRADERS",
+    "state": "Uttar Pradesh",
+    "status": "Active",
+    "registration_date": "2019-04-01",
+    "constitution": "Private Limited Company"
+  },
+  "09ABCPG4821M1ZL": {
+    "gstin": "09ABCPG4821M1ZL",
+    "legal_name": "AMIT GUPTA",
+    "trade_name": "GUPTA ELECTRICALS",
+    "state": "Uttar Pradesh",
+    "status": "Active",
+    "registration_date": "2019-04-01",
+    "constitution": "Proprietorship"
+  },
+  "27AAFCN3344R1ZW": {
+    "gstin": "27AAFCN3344R1ZW",
+    "legal_name": "NOVA PRINTS PRIVATE LIMITED",
+    "trade_name": "NOVA PRINTS",
+    "state": "Maharashtra",
+    "status": "Active",
+    "registration_date": "2019-04-01",
+    "constitution": "Private Limited Company"
+  }
+}

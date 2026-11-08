@@ -1,0 +1,24 @@
+{
+  "title": "V3a \u00b7 Proprietor's own account \u2014 Gupta Electricals",
+  "expected": "Approved (with note)",
+  "story": "The bank account is in the proprietor's personal name. For a proprietorship that is normal, so it passes with a note.",
+  "form": {
+    "legal_name": "Gupta Electricals",
+    "entity_type": "proprietorship",
+    "proprietor_name": "Amit Gupta",
+    "pan": "ABCPG4821M",
+    "address": "22, Gwynne Road, Aminabad",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226018",
+    "contact_name": "Amit Gupta",
+    "email": "guptaelectricals.lko@gmail.com",
+    "phone": "9415012345",
+    "account_number": "0123104567890",
+    "ifsc": "PUNB0012300",
+    "account_holder_name": "Gupta Electricals",
+    "category": "Electrical supplies",
+    "expected_annual_spend_inr": 600000,
+    "gstin": "09ABCPG4821M1ZL"
+  }
+}

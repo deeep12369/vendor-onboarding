@@ -1,0 +1,24 @@
+{
+  "title": "V4 \u00b7 Recycled bank account \u2014 Nova Prints",
+  "expected": "Rejected",
+  "story": "The bank account already belongs to an existing vendor, Nova Traders. Only a check across vendors can see this.",
+  "form": {
+    "legal_name": "Nova Prints Private Limited",
+    "entity_type": "private_limited",
+    "proprietor_name": "",
+    "pan": "AAFCN3344R",
+    "address": "Unit 12, Marol Industrial Estate, Andheri East",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400069",
+    "contact_name": "Karan Shah",
+    "email": "karan@novaprints.in",
+    "phone": "9820012345",
+    "account_number": "918020045678123",
+    "ifsc": "ICIC0000789",
+    "account_holder_name": "Nova Prints Pvt Ltd",
+    "category": "Printing",
+    "expected_annual_spend_inr": 1800000,
+    "gstin": "27AAFCN3344R1ZW"
+  }
+}

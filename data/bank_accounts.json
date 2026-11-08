@@ -1,0 +1,62 @@
+{
+  "50100234567890|HDFC0000123": {
+    "holder_name": "SHARMA PACKAGING PRIVATE LIMITED",
+    "bank": "HDFC Bank"
+  },
+  "912010045671234|UTIB0000456": {
+    "holder_name": "MEHTA HARDWARE",
+    "bank": "Axis Bank"
+  },
+  "33445566778|SBIN0001234": {
+    "holder_name": "APEX OFFICE SUPPLIES PVT LTD",
+    "bank": "State Bank of India"
+  },
+  "0123104567890|PUNB0012300": {
+    "holder_name": "AMIT GUPTA",
+    "bank": "Punjab National Bank"
+  },
+  "50200098765432|HDFC0004567": {
+    "holder_name": "NEHA VERMA",
+    "bank": "HDFC Bank"
+  },
+  "918020045678123|ICIC0000789": {
+    "holder_name": "NOVA TRADERS",
+    "bank": "ICICI Bank"
+  },
+  "50100987654321|HDFC0000890": {
+    "holder_name": "BHARAT STEEL FABRICATORS PRIVATE LIMITED",
+    "bank": "HDFC Bank"
+  },
+  "38291029384|SBIN0004321": {
+    "holder_name": "KAVERI LOGISTICS",
+    "bank": "State Bank of India"
+  },
+  "917010023456789|UTIB0000123": {
+    "holder_name": "SHREE GANESH CATERERS",
+    "bank": "Axis Bank"
+  },
+  "001105012345|ICIC0000111": {
+    "holder_name": "PIONEER IT SERVICES PRIVATE LIMITED",
+    "bank": "ICICI Bank"
+  },
+  "1234567890123|KKBK0000222": {
+    "holder_name": "GREEN LEAF HOUSEKEEPING LLP",
+    "bank": "Kotak Mahindra Bank"
+  },
+  "20145678901|BARB0SALTLA": {
+    "holder_name": "ORIENT PAPER MILLS PRIVATE LIMITED",
+    "bank": "Bank of Baroda"
+  },
+  "60123456789|PUNB0099900": {
+    "holder_name": "DELTA SECURITY SERVICES",
+    "bank": "Punjab National Bank"
+  },
+  "34567890123|SBIN0007766": {
+    "holder_name": "RAO STATIONERY MART",
+    "bank": "State Bank of India"
+  },
+  "50200011223344|HDFC0000777": {
+    "holder_name": "METRO COURIER SOLUTIONS PRIVATE LIMITED",
+    "bank": "HDFC Bank"
+  }
+}

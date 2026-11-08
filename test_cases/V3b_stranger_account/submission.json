@@ -1,0 +1,24 @@
+{
+  "title": "V3b \u00b7 Stranger's account \u2014 Gupta Electricals",
+  "expected": "Pending (needs human review)",
+  "story": "Same vendor, but the bank account belongs to Neha Verma, who is named nowhere in the submission.",
+  "form": {
+    "legal_name": "Gupta Electricals",
+    "entity_type": "proprietorship",
+    "proprietor_name": "Amit Gupta",
+    "pan": "ABCPG4821M",
+    "address": "22, Gwynne Road, Aminabad",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226018",
+    "contact_name": "Amit Gupta",
+    "email": "guptaelectricals.lko@gmail.com",
+    "phone": "9415012345",
+    "account_number": "50200098765432",
+    "ifsc": "HDFC0004567",
+    "account_holder_name": "Gupta Electricals",
+    "category": "Electrical supplies",
+    "expected_annual_spend_inr": 600000,
+    "gstin": "09ABCPG4821M1ZL"
+  }
+}

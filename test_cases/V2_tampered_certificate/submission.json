@@ -1,0 +1,24 @@
+{
+  "title": "V2 \u00b7 Tampered certificate \u2014 Apex Office Supplies",
+  "expected": "Rejected",
+  "story": "The GST certificate's name was edited to match the form, but the registry holds a different company for that GSTIN, and the PDF was saved by an image editor.",
+  "form": {
+    "legal_name": "Apex Office Supplies Private Limited",
+    "entity_type": "private_limited",
+    "proprietor_name": "",
+    "pan": "AADCK7788Q",
+    "address": "B-118, Sector 63",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201301",
+    "contact_name": "Sanjay Rao",
+    "email": "procurement.apexoffice@gmail.com",
+    "phone": "9958812345",
+    "account_number": "33445566778",
+    "ifsc": "SBIN0001234",
+    "account_holder_name": "Apex Office Supplies Pvt Ltd",
+    "category": "Office supplies",
+    "expected_annual_spend_inr": 4500000,
+    "gstin": "09AADCK7788Q1ZD"
+  }
+}

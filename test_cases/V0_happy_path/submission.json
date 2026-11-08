@@ -1,0 +1,24 @@
+{
+  "title": "V0 \u00b7 Happy path \u2014 Sharma Packaging",
+  "expected": "Approved",
+  "story": "Clean submission with meaningless file names. Every source agrees; 'Pvt Ltd' matches 'Private Limited'.",
+  "form": {
+    "legal_name": "Sharma Packaging Private Limited",
+    "entity_type": "private_limited",
+    "proprietor_name": "",
+    "pan": "AAKCS1234F",
+    "address": "Plot 42, Okhla Industrial Area Phase II",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110020",
+    "contact_name": "Rohit Sharma",
+    "email": "rohit@sharmapack.in",
+    "phone": "9811023456",
+    "account_number": "50100234567890",
+    "ifsc": "HDFC0000123",
+    "account_holder_name": "Sharma Packaging Pvt Ltd",
+    "category": "Packaging",
+    "expected_annual_spend_inr": 2500000,
+    "gstin": "07AAKCS1234F1ZK"
+  }
+}

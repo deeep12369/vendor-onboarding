@@ -1,0 +1,24 @@
+{
+  "title": "V1 \u00b7 Wrong document \u2014 Mehta Hardware",
+  "expected": "Pending (awaiting vendor)",
+  "story": "An Aadhaar card instead of the PAN card, and a blurred cheque. Tagging catches both; the message asks for exactly what is missing.",
+  "form": {
+    "legal_name": "Mehta Hardware",
+    "entity_type": "partnership",
+    "proprietor_name": "",
+    "pan": "AAHFM5521K",
+    "address": "Shop 7, Sector 14 Market",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122001",
+    "contact_name": "Vikram Mehta",
+    "email": "accounts@mehtahardware.in",
+    "phone": "9876501234",
+    "account_number": "912010045671234",
+    "ifsc": "UTIB0000456",
+    "account_holder_name": "Mehta Hardware",
+    "category": "Hardware and tools",
+    "expected_annual_spend_inr": 800000,
+    "gstin": "06AAHFM5521K1Z8"
+  }
+}
