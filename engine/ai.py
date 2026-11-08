@@ -122,6 +122,32 @@ class AIUnavailable(Exception):
     pass
 
 
+def explain_error(exc):
+    """Turn a raw Gemini error into one plain sentence (also printed to the app's log)."""
+    msg = str(exc)
+    print(f"[ai] Gemini error: {msg[:500]}", flush=True)
+    if "API_KEY_INVALID" in msg or "API key not valid" in msg:
+        return "API key not valid. Re-copy it from AI Studio into Secrets (straight quotes, no spaces)."
+    if "API key expired" in msg:
+        return "API key expired. Create a new key in AI Studio."
+    if "PERMISSION_DENIED" in msg or "403" in msg:
+        return "Permission denied for this key. Check the key's project in AI Studio."
+    if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
+        return "Free-tier limit reached (too many requests). Wait a minute, or use offline mode."
+    if "404" in msg or "NOT_FOUND" in msg:
+        return "Model not found. Set GEMINI_MODEL in Secrets, e.g. gemini-2.5-flash."
+    return msg[:200]
+
+
+def test_connection(cfg):
+    """A tiny call used by the sidebar's Test button. Returns (ok, message)."""
+    try:
+        answer, model = _call_gemini(cfg, ['Reply with JSON only: {"ok": true}'])
+        return True, f"Connected to {model}."
+    except Exception as exc:
+        return False, explain_error(exc)
+
+
 def _call_gemini(cfg, contents):
     """One Gemini call with JSON output, temperature 0, and retries on rate limits."""
     from google import genai
@@ -218,12 +244,13 @@ def extract_document(file_bytes, file_name, cfg):
     contents = [types.Part.from_bytes(data=file_bytes, mime_type=mime_for(file_name)), EXTRACT_PROMPT]
     try:
         raw, model = _call_gemini(cfg, contents)
-    except AIUnavailable:
+    except AIUnavailable as exc:
+        reason = explain_error(exc)
         stored = _offline_answers().get(sha)   # safety net for the demo files only, clearly labelled
         if stored is None:
-            raise
+            raise AIUnavailable(reason) from exc
         out = _validate_extraction(stored)
-        out.update(source="offline sample answer (Gemini unavailable)", sha256=sha, seconds=0)
+        out.update(source=f"offline sample answer (Gemini unavailable: {reason})", sha256=sha, seconds=0)
         return out
     out = _validate_extraction(raw)
     db.cache_put(cache_key, out)

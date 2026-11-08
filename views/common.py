@@ -59,6 +59,11 @@ def sidebar():
         cfg = ai_config()
         if cfg["mode"] == "live":
             st.success("Live: Gemini reads every document", icon=":material/bolt:")
+            if st.button("Test Gemini connection", icon=":material/network_check:", width="stretch"):
+                from engine.ai import test_connection
+                with st.spinner("Calling Gemini…"):
+                    ok, msg = test_connection(cfg)
+                (st.success if ok else st.error)(msg)
         else:
             st.warning("Offline: stored sample answers for demo files", icon=":material/cloud_off:")
         st.divider()
